@@ -43,6 +43,20 @@ namespace PedraPapeTesouraTest
         [InlineData(Forma.Papel, Forma.Tesoura, Forma.Tesoura, "Tesoura corta papel")]
         [InlineData(Forma.Papel, Forma.Pedra, Forma.Papel, "Papel cobre pedra")]
         [InlineData(Forma.Pedra, Forma.Papel, Forma.Papel, "Papel cobre pedra")]
+        [InlineData(Forma.Pedra, Forma.Lagarto, Forma.Pedra, "Pedra esmaga lagarto")]
+        [InlineData(Forma.Lagarto, Forma.Pedra, Forma.Pedra, "Pedra esmaga lagarto")]
+        [InlineData(Forma.Lagarto, Forma.Spock, Forma.Lagarto, "Lagarto envenena Spock")]
+        [InlineData(Forma.Spock, Forma.Lagarto, Forma.Lagarto, "Lagarto envenena Spock")]
+        [InlineData(Forma.Spock, Forma.Tesoura, Forma.Spock, "Spock quebra tesoura")]
+        [InlineData(Forma.Tesoura, Forma.Spock, Forma.Spock, "Spock quebra tesoura")]
+        [InlineData(Forma.Tesoura, Forma.Lagarto, Forma.Tesoura, "Tesoura decapta lagarto")]
+        [InlineData(Forma.Lagarto, Forma.Tesoura, Forma.Tesoura, "Tesoura decapta lagarto")]
+        [InlineData(Forma.Lagarto, Forma.Papel, Forma.Lagarto, "Lagarto come papel")]
+        [InlineData(Forma.Papel, Forma.Lagarto, Forma.Lagarto, "Lagarto come papel")]
+        [InlineData(Forma.Papel, Forma.Spock, Forma.Papel, "Papel contesta Spock")]
+        [InlineData(Forma.Spock, Forma.Papel, Forma.Papel, "Papel contesta Spock")]
+        [InlineData(Forma.Spock, Forma.Pedra, Forma.Spock, "Spock vaporiza pedra")]
+        [InlineData(Forma.Pedra, Forma.Spock, Forma.Spock, "Spock vaporiza pedra")]
         public void Resultado_jogo_deve_ser_conforme_esperado(Forma forma1, Forma forma2, Forma resultadoEsperado, string requisito)
         {
             // Arrange / Act
